@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.body {
+body {
   font-family: 'Inter', sans-serif;
-  height: 100%;
 }
 
 .banner {
@@ -18,7 +17,6 @@
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  padding-left: 15px;
 }
 
 .lds-ring {
@@ -34,10 +32,11 @@
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid rgb(147 197 253);
+  border: 8px solid rgb(249 168 212);
+  border: 8px solid;
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: rgb(147 197 253) transparent transparent transparent;
+  border-color: rgb(249 168 212) transparent transparent transparent;
 }
 .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;

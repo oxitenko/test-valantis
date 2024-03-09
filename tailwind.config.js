@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      minHeight: {
+        'calc-screen-minus-footer': 'calc(100vh - 176px)',
+      },
+    },
   },
   plugins: [],
 };
