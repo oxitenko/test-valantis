@@ -1,7 +1,6 @@
-import { useQuery } from 'react-query';
 import Card from './Card';
 import Loader from './Loader';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchCards } from '../Ruquests';
 import NotFind from './NotFind';
 
@@ -29,7 +28,7 @@ const FilteredCardList = ({ filteredID, perPage, limit }) => {
 
   return isLoading && filteredID ? (
     <Loader />
-  ) : filteredCards.length === 0 ? (
+  ) : filteredCards?.length === 0 ? (
     <NotFind />
   ) : (
     <ul className="flex flex-wrap gap-7">

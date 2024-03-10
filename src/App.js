@@ -4,11 +4,7 @@ import Pagination from './components/Pagination';
 import Footer from './components/Footer';
 import Filters from './components/Filters';
 import InitilCardList from './components/InitialCardList';
-import { useQuery } from 'react-query';
-import axios from 'axios';
-import { url, headers } from './utils';
 import FilteredCardList from './components/FilteredCardList';
-import Loader from './components/Loader';
 
 function App() {
   const [perPage, setPerPage] = useState(1);
@@ -54,7 +50,11 @@ function App() {
           handleChangeProductList={handleChangeProductList}
         />
       </div>
-      <Pagination perPage={perPage} handlePagination={handlePagination} />
+      <Pagination
+        perPage={perPage}
+        handlePagination={handlePagination}
+        filteredID={filteredID}
+      />
       <Footer />
     </>
   );

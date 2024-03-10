@@ -21,24 +21,27 @@ const InitilCardList = ({ perPage, limit }) => {
     ['ids', perPage],
     () => fetchIDs(calculateOffset(perPage, limit), limit),
     {
+      keepPreviousData: true,
       refetchOnWindowFocus: false,
       retry: 2,
     },
   );
 
-  const IDlist = ids?.data?.data?.result;
+  const isIDsList = ids.isFetched;
 
   const cards = useQuery(
     ['cards', perPage],
     () => fetchCards(ids?.data?.data?.result),
     {
-      keepPreviousData: true,
       refetchOnWindowFocus: false,
       retry: 2,
-      enabled: !!IDlist,
+      enabled: !!isIDsList,
       select: findUniqueCards,
     },
   );
+
+  console.log(ids?.data?.data?.result);
+  console.log(cards);
 
   return (
     <>

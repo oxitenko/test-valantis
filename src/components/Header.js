@@ -13,13 +13,22 @@ const Header = () => {
         </div>
 
         <div className="flex gap-10 justify-center w-3/4">
-          <a className="text-stone-500 text-3xl font-medium" href="#">
+          <a
+            className="text-stone-500 text-3xl font-medium"
+            href="/some/valid/uri#top"
+          >
             каталог
           </a>
-          <a className="text-stone-500 text-3xl font-medium" href="#">
+          <a
+            className="text-stone-500 text-3xl font-medium"
+            href="/some/valid/uri#top"
+          >
             оплата и доставка
           </a>
-          <a className="text-stone-500 text-3xl font-medium" href="#">
+          <a
+            className="text-stone-500 text-3xl font-medium"
+            href="/some/valid/uri#top"
+          >
             контакты
           </a>
         </div>
